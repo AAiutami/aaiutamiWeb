@@ -124,7 +124,7 @@ const features = ref([
 }
 
 .feature-card {
-    background: white;
+    background: var(--gray-100);
     padding: var(--space-8);
     border-radius: var(--rounded-xl);
     box-shadow: var(--shadow-md);
@@ -182,7 +182,7 @@ const features = ref([
     grid-template-columns: 1fr 1fr;
     gap: var(--space-12);
     align-items: center;
-    background: white;
+    background: var(--gray-100);
     padding: var(--space-12);
     border-radius: var(--rounded-2xl);
     box-shadow: var(--shadow-lg);

@@ -36,6 +36,7 @@
     sans-serif;
   --font-family-display: "Poppins", var(--font-family-sans);
   --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+  --text: rgba(31, 41, 55, 0.8); /* gray-900 */
 
   /* Dimensioni font responsive */
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);

@@ -110,7 +110,7 @@
 <style scoped>
 .about {
     padding: var(--space-20) 0;
-    background: white;
+    background: var(--gray-100);
 }
 
 .about-content {

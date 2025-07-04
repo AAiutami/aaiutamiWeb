@@ -202,7 +202,7 @@ const submitForm = async () => {
 <style scoped>
 .contact {
     padding: var(--space-20) 0;
-    background: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+    background: var(--gray-100);
 }
 
 .contact-content {

@@ -267,7 +267,7 @@ const pricingFAQ = ref([
 
 .discount-badge {
     background: var(--accent-color);
-    color: white;
+    color: var(--white);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--rounded-md);
     font-size: var(--text-xs);
@@ -283,7 +283,7 @@ const pricingFAQ = ref([
 }
 
 .pricing-card {
-    background: white;
+    background: var(--gray-100);
     border-radius: var(--rounded-2xl);
     padding: var(--space-8);
     position: relative;
@@ -432,7 +432,7 @@ const pricingFAQ = ref([
 }
 
 .pricing-faq {
-    background: white;
+    background: var(--gray-100);
     padding: var(--space-12);
     border-radius: var(--rounded-2xl);
     box-shadow: var(--shadow-lg);

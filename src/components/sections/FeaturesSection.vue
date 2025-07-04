@@ -2,16 +2,16 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Funzionalità Innovative</h2>
+                <h2 class="section-title">Come Funziona Aiutami</h2>
                 <p class="section-description">
-                    Strumenti all'avanguardia per massimizzare la tua produttività
+                    La nostra piattaforma semplifica il processo di richiesta e offerta di aiuto nella tua comunità, creando connessioni significative tra persone.
                 </p>
             </div>
 
             <div class="features-grid">
                 <div v-for="feature in features" :key="feature.id" class="feature-card">
                     <div class="feature-icon">
-                        <i :class="feature.icon"></i>
+                        <component :is="feature.icon" :size="34" />
                     </div>
                     <h3 class="feature-title">{{ feature.title }}</h3>
                     <p class="feature-description">{{ feature.description }}</p>
@@ -27,15 +27,14 @@
             <!-- Feature Showcase -->
             <div class="feature-showcase">
                 <div class="showcase-content">
-                    <h3 class="showcase-title">Intelligenza Artificiale Avanzata</h3>
+                    <h3 class="showcase-title">Connettiamo Bisogni e Aiuto</h3>
                     <p class="showcase-description">
-                        La nostra AI utilizza algoritmi di machine learning all'avanguardia per offrire
-                        risultati precisi e personalizzati.
+                       Un'app innovativa che collega chi ha bisogno di assistenza con persone disposte ad aiutare. Costruiamo insieme una comunità solidale.
                     </p>
-                    <button class="btn btn-primary">Scopri di Più</button>
+                    <button class="btn btn-primary">Scarica l'app</button>
                 </div>
-                <div class="showcase-visual">
-                    <img src="" alt="AI Visualization" />
+                <div >
+                    <img class="showcase-visual" src="https://i.ibb.co/5bSj9dt/pexels-shvetsa-4672717.jpg" alt="AI Visualization" />
                 </div>
             </div>
         </div>
@@ -43,55 +42,63 @@
 </template>
 
 <script setup>
+import { UserRoundSearch , HeartHandshake , Handshake } from 'lucide-vue-next';
+
 import { ref } from 'vue'
 
 const features = ref([
     {
         id: 1,
-        icon: 'icon-brain',
-        title: 'AI Intelligente',
-        description: 'Algoritmi avanzati per risultati precisi e personalizzati',
-        benefits: ['Machine Learning', 'Deep Learning', 'NLP Avanzato']
+        icon: UserRoundSearch,
+        title: 'Richiedi aiuto',
+        description: 'Inserisci la tua richiesta specificando di cosa hai bisogno e dove ti trovi. Il nostro sistema ti connetterà con chi può aiutarti.',
+        benefits: ['Ricevi aiuto velocemente', 'Instaura rapporti per il futuro']
     },
     {
         id: 2,
-        icon: 'icon-lightning',
-        title: 'Velocità Estrema',
-        description: 'Elaborazione in tempo reale per massima efficienza',
-        benefits: ['Risposta Istantanea', 'Cloud Computing', 'Ottimizzazione']
+        icon: Handshake,
+        title: 'Offri il Tuo Aiuto',
+        description: 'Registrati come volontario e scegli le categorie in cui puoi dare una mano. Potrai rispondere alle richieste nella tua zona.',
+        benefits: ['Guadagna aiutando gli altri', 'Contatto diretto con il cliente', 'Accetta solo i lavori che vuoi']
     },
     {
         id: 3,
-        icon: 'icon-shield',
-        title: 'Sicurezza Totale',
-        description: 'I tuoi dati sono protetti con crittografia enterprise',
-        benefits: ['Crittografia End-to-End', 'GDPR Compliant', 'Backup Automatico']
-    },
-    {
-        id: 4,
-        icon: 'icon-users',
-        title: 'Collaborazione',
-        description: 'Lavora in team con strumenti di collaborazione avanzati',
-        benefits: ['Team Workspace', 'Condivisione Real-time', 'Controllo Versioni']
-    },
-    {
-        id: 5,
-        icon: 'icon-chart',
-        title: 'Analytics',
-        description: 'Dashboard dettagliate per monitorare le performance',
-        benefits: ['Metriche Real-time', 'Report Personalizzati', 'Insights AI']
-    },
-    {
-        id: 6,
-        icon: 'icon-puzzle',
-        title: 'Integrazioni',
-        description: 'Connetti facilmente con i tuoi strumenti preferiti',
-        benefits: ['API REST', 'Webhook', '500+ Integrazioni']
+        icon: HeartHandshake,
+        title: 'Crea Connessioni',
+        description: 'Entra in contatto diretto con chi può aiutarti o con chi ha bisogno del tuo supporto. Costruisci relazioni nella tua comunità.',
+        benefits: ['Rimani in contatto con chi può aiutarti', 'Crea rapporti duraturi nel tempo']
     }
+    // ,
+    // {
+    //     id: 4,
+    //     icon: 'icon-users',
+    //     title: 'Collaborazione',
+    //     description: 'Lavora in team con strumenti di collaborazione avanzati',
+    //     benefits: ['Team Workspace', 'Condivisione Real-time', 'Controllo Versioni']
+    // },
+    // {
+    //     id: 5,
+    //     icon: 'icon-chart',
+    //     title: 'Analytics',
+    //     description: 'Dashboard dettagliate per monitorare le performance',
+    //     benefits: ['Metriche Real-time', 'Report Personalizzati', 'Insights AI']
+    // },
+    // {
+    //     id: 6,
+    //     icon: 'icon-puzzle',
+    //     title: 'Integrazioni',
+    //     description: 'Connetti facilmente con i tuoi strumenti preferiti',
+    //     benefits: ['API REST', 'Webhook', '500+ Integrazioni']
+    // }
 ])
 </script>
 
 <style scoped>
+
+.showcase-visual{
+    border-radius: var(--rounded-xl);
+}
+
 .features {
     padding: var(--space-20) 0;
     background: var(--gray-50);
@@ -129,6 +136,11 @@ const features = ref([
     border-radius: var(--rounded-xl);
     box-shadow: var(--shadow-md);
     transition: var(--transition-base);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .feature-card:hover {
@@ -165,16 +177,15 @@ const features = ref([
 }
 
 .feature-list {
-    list-style: none;
+    list-style: outside;
     padding: 0;
 }
 
 .feature-list li {
-    display: flex;
-    align-items: center;
     gap: var(--space-2);
     color: var(--gray-700);
     margin-bottom: var(--space-2);
+    
 }
 
 .feature-showcase {

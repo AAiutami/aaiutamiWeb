@@ -8,28 +8,27 @@
                         <span class="logo-text">AAIUTAMI</span>
                     </div>
                     <p class="footer-description">
-                        L'intelligenza artificiale che trasforma il modo di lavorare.
-                        Semplice, potente, sicura.
+                        Un'app innovativa che collega chi ha bisogno di assistenza con persone disposte ad aiutare. Costruiamo insieme una comunità solidale.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link">
-                            <i class="icon-twitter"></i>
+                            <ion-icon :icon="logoFacebook"></ion-icon>
                         </a>
                         <a href="#" class="social-link">
-                            <i class="icon-linkedin"></i>
+                            <ion-icon :icon="logoInstagram"></ion-icon>
                         </a>
                         <a href="#" class="social-link">
-                            <i class="icon-github"></i>
+                            <ion-icon :icon="logoX"></ion-icon>
                         </a>
                         <a href="#" class="social-link">
-                            <i class="icon-youtube"></i>
+                            <ion-icon :icon="logoTiktok"></ion-icon>
                         </a>
                     </div>
                 </div>
 
                 <!-- Link utili -->
                 <div class="footer-links">
-                    <div class="link-group">
+                    <!-- <div class="link-group">
                         <h4>Prodotto</h4>
                         <ul>
                             <li><a href="#features">Funzionalità</a></li>
@@ -38,7 +37,7 @@
                             <li><a href="/integrations">Integrazioni</a></li>
                             <li><a href="/changelog">Novità</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <div class="link-group">
                         <h4>Azienda</h4>
@@ -57,8 +56,8 @@
                             <li><a href="/help">Centro Assistenza</a></li>
                             <li><a href="/docs">Documentazione</a></li>
                             <li><a href="#contact">Contatti</a></li>
-                            <li><a href="/status">Status</a></li>
-                            <li><a href="/community">Community</a></li>
+                            <!-- <li><a href="/status">Status</a></li> -->
+                            <!-- <li><a href="/community">Community</a></li> -->
                         </ul>
                     </div>
 
@@ -75,7 +74,7 @@
                 </div>
 
                 <!-- Newsletter -->
-                <div class="newsletter">
+                <!-- <div class="newsletter">
                     <h4>Resta Aggiornato</h4>
                     <p>Ricevi le ultime novità e aggiornamenti su AAIUTAMI</p>
                     <form @submit.prevent="subscribeNewsletter" class="newsletter-form">
@@ -89,7 +88,7 @@
                     <p class="newsletter-note">
                         Niente spam, solo contenuti di valore. Cancellati quando vuoi.
                     </p>
-                </div>
+                </div> -->
             </div>
 
             <!-- Copyright -->
@@ -98,9 +97,9 @@
                     <p>&copy; {{ currentYear }} AAIUTAMI. Tutti i diritti riservati.</p>
                 </div>
                 <div class="footer-meta">
-                    <span>Made with ❤️ in Italy</span>
+                    <span></span>
                     <span>•</span>
-                    <span>Powered by AI</span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -108,6 +107,9 @@
 </template>
 
 <script setup>
+import { IonIcon } from '@ionic/vue' 
+import { add, logoFacebook, logoInstagram, logoTiktok, logoX } from 'ionicons/icons'
+import {  } from 'lucide-vue-next'
 import { ref, computed } from 'vue'
 
 const emailNewsletter = ref('')
@@ -131,14 +133,14 @@ const subscribeNewsletter = () => {
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: var(--space-12);
-    margin-bottom: var(--space-12);
-}
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-16);
+    }
 
 .footer-brand {
     max-width: 300px;
+    margin-right: var(--space-16);
 }
 
 .logo-text {
@@ -165,7 +167,7 @@ const subscribeNewsletter = () => {
 .social-link {
     width: 40px;
     height: 40px;
-    background: var(--gray-800);
+    background: var(--gray-50);
     border-radius: var(--rounded-lg);
     display: flex;
     align-items: center;
@@ -181,9 +183,9 @@ const subscribeNewsletter = () => {
 }
 
 .footer-links {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-8);
+    display: flex;
+    justify-content: end;
+    gap: var(--space-16);
 }
 
 .link-group h4 {

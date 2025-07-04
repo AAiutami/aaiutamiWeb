@@ -63,6 +63,11 @@
   --space-20: 5rem;
   --space-24: 6rem;
   --space-32: 8rem;
+  --space-36: 9rem;
+  --space-40: 10rem;
+  --space-48: 12rem;
+  --space-56: 14rem;
+  --space-64: 16rem;
 
   /* Border radius moderni */
   --rounded-sm: 0.25rem;

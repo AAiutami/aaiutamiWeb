@@ -13,15 +13,7 @@
                 <ul class="nav-links">
                     <li><a href="#features" class="nav-link">Funzionalità</a></li>
                     <li><a href="#about" class="nav-link">Chi Siamo</a></li>
-                    <li><a href="#pricing" class="nav-link">Prezzi</a></li>
-                    <li><a href="#contact" class="nav-link">Contatti</a></li>
                 </ul>
-
-                <!-- Action Buttons -->
-                <div class="nav-actions">
-                    <button class="btn btn-secondary btn-sm">Accedi</button>
-                    <button class="btn btn-primary btn-sm">Inizia Gratis</button>
-                </div>
 
                 <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" @click="toggleMobileMenu" :class="{ active: mobileMenuOpen }">
@@ -36,8 +28,6 @@
                 <ul class="mobile-nav-links">
                     <li><a href="#features" @click="closeMobileMenu" class="mobile-nav-link">Funzionalità</a></li>
                     <li><a href="#about" @click="closeMobileMenu" class="mobile-nav-link">Chi Siamo</a></li>
-                    <li><a href="#pricing" @click="closeMobileMenu" class="mobile-nav-link">Prezzi</a></li>
-                    <li><a href="#contact" @click="closeMobileMenu" class="mobile-nav-link">Contatti</a></li>
                 </ul>
                 <div class="mobile-actions">
                     <button class="btn btn-secondary btn-full" @click="closeMobileMenu">Accedi</button>
@@ -86,16 +76,19 @@ onUnmounted(() => {
 
 <style scoped>
 .header {
-    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--rounded-xl);
+    margin-block: var(--space-4);
+    margin-inline: auto;
+    max-width: 1400px;
+    background: var(--gray-50);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--gray-200);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
     transition: var(--transition-base);
 }
 

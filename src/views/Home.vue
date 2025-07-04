@@ -5,8 +5,6 @@
             <HeroSection />
             <FeaturesSection />
             <AboutSection />
-            <PricingSection />
-            <ContactSection />
         </main>
         <Footer />
     </div>

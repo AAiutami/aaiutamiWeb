@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <nav class="navbar container">
+        <nav class="navbar">
             <div class="nav-content">
                 <!-- Logo -->
                 <div class="logo">
@@ -102,6 +102,7 @@ onUnmounted(() => {
 }
 
 .navbar {
+    padding: var(--space-4) var(--space-10);
     position: relative;
 }
 
@@ -223,10 +224,10 @@ onUnmounted(() => {
 
 .mobile-menu {
     position: absolute;
-    top: 100%;
+    top: 100px;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--gray-100);
     border-radius: 0 0 var(--rounded-xl) var(--rounded-xl);
     box-shadow: var(--shadow-xl);
     padding: var(--space-6);

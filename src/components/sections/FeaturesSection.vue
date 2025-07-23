@@ -58,8 +58,8 @@ const features = ref([
         id: 2,
         icon: Handshake,
         title: 'Offri il Tuo Aiuto',
-        description: 'Registrati come volontario e scegli le categorie in cui puoi dare una mano. Potrai rispondere alle richieste nella tua zona.',
-        benefits: ['Guadagna aiutando gli altri', 'Contatto diretto con il cliente', 'Accetta solo i lavori che vuoi']
+        description: 'Registrati come helper e scegli le categorie in cui puoi dare una mano. Potrai rispondere alle richieste nella tua zona.',
+        benefits: ['Guadagna aiutando gli altri', 'Contatto diretto con il cliente', 'Accetta solo i lavori che sei in grado di gestire']
     },
     {
         id: 3,
@@ -177,6 +177,7 @@ const features = ref([
 }
 
 .feature-list {
+    text-align: left;
     list-style: outside;
     padding: 0;
 }

@@ -5,16 +5,22 @@
                 <!-- Logo -->
                 <div class="logo">
                     <router-link to="/" class="logo-link">
+                        <img src="/src/assets/aaiutami.png" alt="Logo" class="logo-image" />
                         <span class="logo-text">AAIUTAMI</span>
                     </router-link>
                 </div>
 
                 <!-- Navigation Links -->
-                <ul class="nav-links">
-                    <li><a href="#features" class="nav-link">Funzionalità</a></li>
-                    <li><a href="#about" class="nav-link">Chi Siamo</a></li>
-                </ul>
-
+                <div class="nav-links">
+                    <ul class="nav-links">
+                        <li><a href="#features" class="nav-link">Funzionalità</a></li>
+                        <li><a href="#about" class="nav-link">Chi Siamo</a></li>
+                    </ul>
+                    <button class="btn btn-secondary">
+                        <Download :size="20" />
+                        Download App
+                    </button>
+                </div>
                 <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" @click="toggleMobileMenu" :class="{ active: mobileMenuOpen }">
                     <span class="hamburger-line"></span>
@@ -43,6 +49,9 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import {
+    Download,
+} from 'lucide-vue-next'
 
 const mobileMenuOpen = ref(false)
 
@@ -80,7 +89,7 @@ onUnmounted(() => {
     margin-block: var(--space-4);
     margin-inline: auto;
     max-width: 1400px;
-    background: var(--gray-50);
+    background: var(--gray-75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     position: fixed;
@@ -102,6 +111,13 @@ onUnmounted(() => {
     justify-content: space-between;
     padding: var(--space-4) 0;
     height: 70px;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--rounded-full);
+    margin-right: var(--space-2);
 }
 
 .logo-link {
